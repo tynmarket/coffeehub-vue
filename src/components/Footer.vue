@@ -1,14 +1,7 @@
 <template>
   <footer class="footer">
     <p class="copyright">
-      ©
-      <a
-        class="twitter-name"
-        href="https://twitter.com/tynmarket"
-        target="_blank"
-      >
-        tynmarket
-      </a>
+      © <a class="twitter-name" href="https://twitter.com/tynmarket" target="_blank"> tynmarket </a>
     </p>
     <div class="github">
       <a href="https://github.com/tynmarket/coffeehub" target="_blank">
@@ -17,10 +10,8 @@
     </div>
     <div class="copyright-flaticon">
       Icons made by
-      <a href="http://www.freepik.com" title="Freepik" target="_blank">
-        &nbsp;Freepik&nbsp;
-      </a>
-      is licensed by
+      <a href="http://www.freepik.com" title="Freepik" target="_blank"> &nbsp;Freepik&nbsp; </a> is
+      licensed by
       <a
         href="http://creativecommons.org/licenses/by/3.0/"
         title="Creative Commons BY 3.0"

@@ -3,9 +3,8 @@ const PATH_COFEES = "/coffees";
 function coffees(roast) {
   if (roast != null) {
     return `${PATH_COFEES}/roast/${roast}`;
-  } else {
-    return "/";
   }
+  return '/';
 }
 
 export default {
