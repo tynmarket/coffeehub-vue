@@ -1,8 +1,7 @@
 <template>
   <header class="header">
     <a class="header-logo" href="/">
-      <img src="../assets/icon.svg" />
-      <span class="header-title"> Coffee Hub </span>
+      <img src="../assets/icon.svg" /> <span class="header-title"> Coffee Hub </span>
     </a>
   </header>
 </template>

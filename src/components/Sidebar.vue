@@ -14,14 +14,10 @@
           </router-link>
         </li>
         <li class="sidebar-item">
-          <router-link :to="path.highRoast" class="roast-high">
-            ハイロースト
-          </router-link>
+          <router-link :to="path.highRoast" class="roast-high"> ハイロースト </router-link>
         </li>
         <li class="sidebar-item">
-          <router-link :to="path.cityRoast" class="roast-city">
-            シティロースト
-          </router-link>
+          <router-link :to="path.cityRoast" class="roast-city"> シティロースト </router-link>
         </li>
         <li class="sidebar-item">
           <router-link :to="path.fullcityRoast" class="roast-fullcity">
@@ -29,9 +25,7 @@
           </router-link>
         </li>
         <li class="sidebar-item">
-          <router-link :to="path.frenchRoast" class="roast-french">
-            フレンチロースト
-          </router-link>
+          <router-link :to="path.frenchRoast" class="roast-french"> フレンチロースト </router-link>
         </li>
       </ul>
     </section>

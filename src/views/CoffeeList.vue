@@ -3,9 +3,7 @@
     <div class="section-title-and-roast-select">
       <h1 :class="`section-title coffee-color-${roast || 'high'}`">
         新着コーヒー豆一覧
-        <span v-if="roastText" class="hide-for-mobile"
-          >（{{ roastText }}ロースト）</span
-        >
+        <span v-if="roastText" class="hide-for-mobile">（{{ roastText }}ロースト）</span>
       </h1>
       <!-- for mobile
       <span className="roast-select-button" onClick={this.openRoastList}>
@@ -50,7 +48,7 @@ export default {
     };
   },
   created() {
-    //this.coffees = [{"shop":"ROKUMEI COFFEE CO.","country":"グアテマラ","taste":"ブルーベリーやピーチ、ミルクチョコレートのようなフレーバー。キャンディのような甘さが特徴的。口に含んだ時の質感や触感もなめらかで、丁寧な飲み口です。","roast_text":"シナモン","roast":"cinnamon","arrival_date":"6月27日","arrival_month":6,"url":"https://www.rococo-coffee.co.jp/SHOP/rcso-gt-003.html","area":"エル・インフェルト ウノ農園 トラディショナル ナチュラル","new":false}]
+    // this.coffees = [{"shop":"ROKUMEI COFFEE CO.","country":"グアテマラ","taste":"ブルーベリーやピーチ、ミルクチョコレートのようなフレーバー。キャンディのような甘さが特徴的。口に含んだ時の質感や触感もなめらかで、丁寧な飲み口です。","roast_text":"シナモン","roast":"cinnamon","arrival_date":"6月27日","arrival_month":6,"url":"https://www.rococo-coffee.co.jp/SHOP/rcso-gt-003.html","area":"エル・インフェルト ウノ農園 トラディショナル ナチュラル","new":false}]
     this.fetchCoffees();
   },
   watch: {
@@ -75,7 +73,7 @@ export default {
         this.showSpinner = false;
       });
     },
-    getCoffees: async function(roast, query) {
+    async getCoffees(roast, query) {
       try {
         const response = await axios.get(this.endpoint(roast, query));
         return response.data;
@@ -86,14 +84,13 @@ export default {
     endpoint(roast, query) {
       const ENDPOINT_COFEES =
         process.env.NODE_ENV === "production"
-          ? "http://coffeehub.tokyo/api/coffees"
-          : "/api/coffees";
+          ? 'http://coffeehub.tokyo/api/coffees'
+          : '/api/coffees';
 
       if (roast != null) {
-        return `${ENDPOINT_COFEES}/roast/${roast}${query || ""}`;
-      } else {
-        return `${ENDPOINT_COFEES}${query || ""}`;
+        return `${ENDPOINT_COFEES}/roast/${roast}${query || ''}`;
       }
+      return `${ENDPOINT_COFEES}${query || ''}`;
     },
     roastToText(roast) {
       return {
