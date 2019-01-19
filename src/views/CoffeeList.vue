@@ -84,7 +84,7 @@ export default {
       }
     },
     endpoint(roast, query) {
-      const ENDPOINT_COFEES = "/api/coffees";
+      const ENDPOINT_COFEES = "http://coffeehub.tokyo/api/coffees";
       if (roast != null) {
         return `${ENDPOINT_COFEES}/roast/${roast}${query || ""}`;
       } else {
