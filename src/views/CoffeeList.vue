@@ -84,7 +84,11 @@ export default {
       }
     },
     endpoint(roast, query) {
-      const ENDPOINT_COFEES = "http://coffeehub.tokyo/api/coffees";
+      const ENDPOINT_COFEES =
+        process.env.NODE_ENV === "production"
+          ? "http://coffeehub.tokyo/api/coffees"
+          : "/api/coffees";
+
       if (roast != null) {
         return `${ENDPOINT_COFEES}/roast/${roast}${query || ""}`;
       } else {
